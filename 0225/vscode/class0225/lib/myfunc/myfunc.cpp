@@ -4,20 +4,20 @@
 #include <ESP32Ping.h>
 #include <driver/gpio.h>
 
-#define SSID "Your_SSID"
-#define WIFI_PW "YOUR_WIFI_PW"
-
+// 打印 "Hello world!" 訊息
 void say_hello_world(void)
 {
     Serial.println("Hello world! from myfunc.h");
 }
 
+// 點亮 LED 燈
 void lightup_led(void)
 {
     pinMode(2, OUTPUT);
     digitalWrite(2, HIGH);
 }
 
+// Ping 主機
 bool ping_host(const char *hostname)
 {
     if (WiFi.status() == WL_CONNECTED)
@@ -40,6 +40,7 @@ bool ping_host(const char *hostname)
     }
 }
 
+// 啟動 WiFi 連接
 void start_wifi(void)
 {
     WiFi.begin(SSID, WIFI_PW);
@@ -56,8 +57,7 @@ void start_wifi(void)
     lightup_led();
 }
 
-
-
+// 獲取天氣數據
 String get_weather_data(void)
 {
     if (WiFi.status() == WL_CONNECTED)
