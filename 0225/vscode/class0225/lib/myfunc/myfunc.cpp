@@ -3,6 +3,7 @@
 #include <HTTPClient.h>
 #include <ESP32Ping.h>
 #include <driver/gpio.h>
+#include "myfunc.h"
 
 // 打印 "Hello world!" 訊息
 void say_hello_world(void)
