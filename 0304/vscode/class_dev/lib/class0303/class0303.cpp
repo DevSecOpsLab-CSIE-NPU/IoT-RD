@@ -2,9 +2,12 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ESP32Ping.h>
-#include <driver/gpio.h>
-#include "class0303.h"
 #include <ArduinoJson.h>
+
+#include "secrets.h" // 包含一個單獨的標頭檔案以存放敏感資訊
+
+#define LED_PIN 2
+
 
 // 打印 "Hello world!" 訊息
 void say_hello_world(void)
@@ -15,8 +18,8 @@ void say_hello_world(void)
 // 點亮 LED 燈
 void lightup_led(void)
 {
-    pinMode(2, OUTPUT);
-    digitalWrite(2, HIGH);
+    pinMode(LED_PIN, OUTPUT);
+    digitalWrite(LED_PIN, HIGH);
 }
 
 // Ping 主機

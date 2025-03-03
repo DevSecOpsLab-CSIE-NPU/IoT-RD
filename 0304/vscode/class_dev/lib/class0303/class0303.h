@@ -7,9 +7,6 @@
 #include <ESP32Ping.h>
 #include <driver/gpio.h>
 
-#define SSID "YOUR_SSID_NAME" // WiFi SSID
-#define WIFI_PW "YOUR_WIFI_PASSWORD" // WiFi 密碼
-
 // 獲取天氣數據的函數，返回天氣數據字串
 String get_weather_data(void);
 
