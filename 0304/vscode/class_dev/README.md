@@ -2,7 +2,7 @@
 
 ## 0303
 
-在 `run_class0303_setup()` 中
+在 `run_class0303_setup()` [class0303.cpp#L118](https://github.com/DevSecOpsLab-CSIE-NPU/IoT-RD/blob/08295148b4be0d639726e4be478ec4821da6604b/0304/vscode/class_dev/lib/class0303/class0303.cpp#L118)中
 1. 在 class0303.h 中建立 hello world 函數 🌍
 2. 嘗試連接你的 WiFi 📶
 3. 當連接到 WiFi 時，嘗試 ping Google 🌐
