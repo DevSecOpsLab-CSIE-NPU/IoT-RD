@@ -4,7 +4,7 @@
 #include <ESP32Ping.h>
 #include <ArduinoJson.h>
 
-#include "secrets.h" // 包含一個單獨的標頭檔案以存放敏感資訊
+#include "secrets.h" // 包含一個單獨的標頭檔案以存放敏感資訊 
 
 #define LED_PIN 2
 
