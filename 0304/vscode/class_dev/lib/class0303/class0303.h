@@ -25,4 +25,6 @@ void run_class0303_setup(void);
 // 執行 class0303 的 loop 函數，在 Arduino 的 loop() 中呼叫
 void run_class0303_loop(void);
 
+void lightup_led(void);
+
 #endif // CLASS0303_H
