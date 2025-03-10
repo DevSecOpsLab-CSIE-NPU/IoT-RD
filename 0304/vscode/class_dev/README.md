@@ -1,17 +1,21 @@
 # 開發流程
 
 ## 0311
-介紹如何在 ESP32 上開發藍牙功能，包括藍牙經典（Bluetooth Classic）和藍牙低功耗（BLE）。課程內容涵蓋以下幾個部分：
+我們將學習如何在 ESP32 上開發藍牙功能，包括藍牙經典（Bluetooth Classic）和藍牙低功耗（BLE）。​課程內容涵蓋以下幾個部分：​
 
-1. 初始化和設置：設置 LED 引腳、藍牙設備名稱和 UUID，並初始化藍牙。
+1. 初始化和設置：
+   - 設置 LED 引腳：​我們將學習如何設定 ESP32 的 GPIO 引腳來控制 LED 的開關。​
+   - 設定藍牙設備名稱和 UUID：​瞭解如何為您的藍牙設備指定名稱和唯一識別碼（UUID），以便其他設備能夠識別和連接。​
+   - 初始化藍牙：​學習如何啟動 ESP32 的藍牙模組，為後續的藍牙操作做好準備。​
 2. 藍牙經典功能：
-   - startBluetoothService：初始化藍牙並啟動服務。
-   - scanBluetoothDevices：異步和同步掃描藍牙設備。
-   - repeatMyTyping：接收並回顧藍牙串口數據。
+   - startBluetoothService：​我們將學習如何初始化藍牙並啟動服務，使 ESP32 能夠被其他藍牙設備發現和連接。​
+   - scanBluetoothDevices：​瞭解如何使用異步和同步方式掃描周圍的藍牙設備，並獲取它們的資訊。​
+   - repeatMyTyping：​學習如何接收並回應藍牙串口傳輸的資料，實現簡單的數據通信。​
 3. BLE 功能：
-   - startBLEService：創建 BLE 伺服器、服務和特徵，並啟動廣播。
-   - MyServerCallbacks 和 MyCharacteristicCallbacks：處理 BLE 連接和特徵讀寫回調。
-學生將學習如何設置和控制 LED，初始化和使用藍牙經典和 BLE 功能，並處理藍牙設備的掃描、連接和數據傳輸。課程還包括實現 BLE 伺服器和特徵的回調函數，以處理連接和數據讀寫事件。
+   - startBLEService：​我們將學習如何創建 BLE 伺服器、服務和特徵，並啟動廣播，使其他 BLE 設備能夠發現並連接。​
+   - MyServerCallbacks 和 MyCharacteristicCallbacks：​瞭解如何處理 BLE 連接和特徵讀寫的回調函數，以管理連接狀態和數據傳輸。​
+
+通過這些學習，您將掌握如何設置和控制 LED，初始化和使用藍牙經典和 BLE 功能，並處理藍牙設備的掃描、連接和數據傳輸。​此外，您還將學習如何實現 BLE 伺服器和特徵的回調函數，以有效管理連接和數據讀寫事件。
 
 ## 0304
 
