@@ -11,7 +11,7 @@
 ![img_step2](imgs/set_folder_to_class_dev.png)
 
 ### 小組討論 - 期末專題討論
-因老師 09:30 要去開會，故請進行小組討論，預計 4/8 日(期中考周)進行小組分享。
+因老師 09:30 要去開會，故請進行小組討論，預計 4/8 日(期中考周)進行小組分享 (4/25 抽順序)。
 
 [![The 20 Best ESP32 Projects of 2024!](https://img.youtube.com/vi/sjIpt7wNMN8/0.jpg)](https://www.youtube.com/watch?v=sjIpt7wNMN8)
 
