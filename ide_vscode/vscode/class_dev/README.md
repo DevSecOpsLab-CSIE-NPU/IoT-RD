@@ -2,7 +2,16 @@
 
 上課的 Concall Link https://meet.google.com/izw-wgem-pok
 
-## 0325 Wokwi
+## 0325 
+
+### MQTT
+![image](https://github.com/user-attachments/assets/63c6919f-56e4-408a-b871-1d8b19275c9e)
+
+https://app.sli.do/event/9NwubfYtN1rFbELJcVGxTS
+
+
+
+### Wokwi
 
 [Wokwi](https://wokwi.com/) 提供了一個線上平台，支援多種微控制器的模擬，包括 ESP32、STM32、Arduino 和 Raspberry Pi Pico 等。​使用者可以在瀏覽器中設計電路、撰寫程式碼，並即時模擬專案的運行，無需實體硬體。​
 
