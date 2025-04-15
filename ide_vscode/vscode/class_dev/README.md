@@ -40,6 +40,9 @@ mpremote connect /dev/cu.usbserial-0001
 ```
 
 Step 7: 亮光明燈
+
+> 這裡，你可以使用 [Wokwi](https://wokwi.com/) 練習!!!
+
 ```python
 from machine import Pin
 import time
