@@ -5,7 +5,7 @@
 ## 0415
 
 ### 刷 MicroPython
-![MircoPython](https://micropython.org/download/?port=esp32) for [ESP32 / WROOM](https://micropython.org/download/ESP32_GENERIC/)
+[MircoPython](https://micropython.org/download/?port=esp32) for [ESP32 / WROOM](https://micropython.org/download/ESP32_GENERIC/)
 
 Step 1: 先取得 python 環境，及工具
 ```bash
