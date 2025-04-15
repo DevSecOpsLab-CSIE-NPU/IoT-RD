@@ -2,14 +2,66 @@
 
 上課的 Concall Link https://meet.google.com/izw-wgem-pok
 
+## 0415
+
+![MircoPython](https://micropython.org/download/?port=esp32) for [ESP32 / WROOM](https://micropython.org/download/ESP32_GENERIC/)
+
+Step 1: 先取得 python 環境，及工具
+```bash
+pip install esptool
+```
+
+Step 2: 用記事本，留下你的串接序號埠 (一般來說，esptool 會自己抓啦!)
+
+```text
+/dev/cu.usbserial-0001 # note: 我的電腦是 Mac
+```
+
+Step 3: 洗掉 Flash 資料，過程中要把 Visual Studio Code 關掉! 
+```bash 
+esptool.py --chip esp32 --port /dev/cu.usbserial-0001 erase_flash
+```
+
+Step 4: 載入 MircoPython firmware
+```bash
+esptool.py --chip esp32 --port /dev/cu.usbserial-0001 --baud 460800 write_flash -z 0x1000 ESP32_GENERIC-20241129-v1.24.1.bin
+```
+
+Step 5: 安裝 mpremote
+```bash
+pip install mpremote
+```
+
+Step 6: 使用 mpremote 寫 mircopython
+```bash
+mpremote devs
+mpremote connect /dev/cu.usbserial-0001
+```
+
+Step 7: 亮光明燈
+```python
+from machine import Pin
+import time
+
+led = Pin(2, Pin.OUT)  # 指定 GPIO2 為輸出
+
+while True:
+    led.on()       # 亮
+    time.sleep(1)  # 等 1 秒
+    led.off()      # 滅
+    time.sleep(1)  # 再等 1 秒
+```
+
+![img](imgs/micropython_led.png)
+
+Step 8: 離開 ctrl + ]
+
 ## 0325 
 
 ### MQTT
 ![image](https://github.com/user-attachments/assets/63c6919f-56e4-408a-b871-1d8b19275c9e)
 
 https://app.sli.do/event/9NwubfYtN1rFbELJcVGxTS
-
-
 
 ### Wokwi
 
