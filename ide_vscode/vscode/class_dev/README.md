@@ -4,6 +4,7 @@
 
 ## 0415
 
+### 刷 MicroPython
 ![MircoPython](https://micropython.org/download/?port=esp32) for [ESP32 / WROOM](https://micropython.org/download/ESP32_GENERIC/)
 
 Step 1: 先取得 python 環境，及工具
@@ -55,6 +56,12 @@ while True:
 ![img](imgs/micropython_led.png)
 
 Step 8: 離開 ctrl + ]
+
+### 刷回原來的環境
+
+```bash
+esptool.py --chip esp32 erase_flash
+```
 
 ## 0325 
 
