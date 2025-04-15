@@ -4,6 +4,11 @@
 
 ## 0415
 
+### 取得 miniconda
+
+請下載並安裝 [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main)
+
+
 ### 刷 MicroPython
 [MircoPython](https://micropython.org/download/?port=esp32) for [ESP32 / WROOM](https://micropython.org/download/ESP32_GENERIC/)
 
