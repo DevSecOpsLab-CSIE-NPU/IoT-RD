@@ -23,4 +23,4 @@ use [Wokwi](https://wokwi.com/) if your OLED is broken like me.
 ## 加分題
 
 - 在 OLED 上秀出的你姓名、學號 + 平常成績2分
-- due 04
+- due 04 
