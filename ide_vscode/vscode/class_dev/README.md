@@ -1,5 +1,100 @@
 # 開發流程
 
+上課的 Concall Link https://meet.google.com/izw-wgem-pok
+
+## 0415
+
+### 取得 miniconda
+
+請下載並安裝 [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main)
+
+
+### 刷 MicroPython
+[MircoPython](https://micropython.org/download/?port=esp32) for [ESP32 / WROOM](https://micropython.org/download/ESP32_GENERIC/)
+
+Step 1: 先取得 python 環境，及工具
+```bash
+pip install esptool
+```
+
+Step 2: 用記事本，留下你的串接序號埠 (一般來說，esptool 會自己抓啦!)
+
+```text
+/dev/cu.usbserial-0001 # note: 我的電腦是 Mac
+```
+
+Step 3: 洗掉 Flash 資料，過程中要把 Visual Studio Code 關掉! 
+```bash 
+esptool.py --chip esp32 --port /dev/cu.usbserial-0001 erase_flash
+```
+
+Step 4: 載入 MircoPython firmware
+```bash
+esptool.py --chip esp32 --port /dev/cu.usbserial-0001 --baud 460800 write_flash -z 0x1000 ESP32_GENERIC-20241129-v1.24.1.bin
+```
+
+Step 5: 安裝 mpremote
+```bash
+pip install mpremote
+```
+
+Step 6: 使用 mpremote 寫 mircopython
+```bash
+mpremote devs
+mpremote connect /dev/cu.usbserial-0001
+```
+
+Step 7: 亮光明燈
+
+> 這裡，你可以使用 [Wokwi](https://wokwi.com/) 練習!!!
+
+```python
+from machine import Pin
+import time
+
+led = Pin(2, Pin.OUT)  # 指定 GPIO2 為輸出
+
+while True:
+    led.on()       # 亮
+    time.sleep(1)  # 等 1 秒
+    led.off()      # 滅
+    time.sleep(1)  # 再等 1 秒
+```
+
+![img](imgs/micropython_led.png)
+
+Step 8: 離開 ctrl + ]
+
+### 刷回原來的環境
+
+```bash
+esptool.py --chip esp32 erase_flash
+```
+
+## 0325 
+
+### MQTT
+![image](https://github.com/user-attachments/assets/63c6919f-56e4-408a-b871-1d8b19275c9e)
+
+https://app.sli.do/event/9NwubfYtN1rFbELJcVGxTS
+
+### Wokwi
+
+[Wokwi](https://wokwi.com/) 提供了一個線上平台，支援多種微控制器的模擬，包括 ESP32、STM32、Arduino 和 Raspberry Pi Pico 等。​使用者可以在瀏覽器中設計電路、撰寫程式碼，並即時模擬專案的運行，無需實體硬體。​
+
+主要功能
+
+- 多元元件支援：​模擬各種感測器、顯示器、馬達和 Wi-Fi 功能，滿足不同專案需求。​
+- 即時模擬：​即時觀察程式碼執行效果，加速開發流程。​
+- 範例專案：​提供多個範例專案，如 Wi-Fi 掃描、NTP 時鐘、HTTP 伺服器等，供使用者參考和學習。 ​
+
+操作說明
+1. 進入 Wokwi 網站：​打開瀏覽器，前往 [Wokwi 官方網站](https://wokwi.com/)
+2. 選擇模擬器：​在首頁選擇所需的微控制器模擬器，例如 ESP32。​
+3. 設計電路：​使用拖放介面添加元件，設計電路圖。​
+4. 撰寫程式碼：​在內建的程式碼編輯器中撰寫或上傳程式碼。​
+5. 開始模擬：​點擊「開始模擬」按鈕，觀察專案的運行效果。​
+
 ## 0318
 
 ### 環境調整
